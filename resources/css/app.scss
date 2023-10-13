@@ -1,0 +1,78 @@
+.test {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 200px;
+    background: #ececec;
+    border-radius: 15px;
+    padding: 30px;
+    transition: all 0.2s;
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        gap: 30px;
+
+        &-section {
+            display: flex;
+            gap: 5px;
+        }
+
+        &-value {
+            font-weight: 700;
+        }
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        background: #5f5fe5;
+        border-radius: 5px;
+        height: 40px;
+        line-height: 40px;
+        width: max-content;
+        padding: 0 20px;
+        color: #ffffff;
+        cursor: pointer;
+
+        &:hover {
+            opacity: .8;
+        }
+    }
+
+    &.loading {
+        opacity: .5;
+        pointer-events: none;
+    }
+}
+
+.loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+    /* Поворот на 360 градусов */
+}
